@@ -9,6 +9,12 @@ I made it with `Sqitch`, that helps you to versionize your database.
 And all the input made by user are validate by `Joi`.  
 I also made a documentation with `JSDoc Swagger` to test all the routes of the application.
 
+## What is Retrogamers API?
+
+Retrogramers is a web application who will help you to create your retrogaming's collection.  
+You will find 43 systems in our database, consoles and portable consoles from the '70 to the begining of the '2000.  
+You will find a list of 32453 games, and the details of 32285 of them.
+
 ## Install dependencies
 
 ```shell
