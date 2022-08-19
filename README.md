@@ -1,10 +1,10 @@
 # API RetroGamers
 
 Here you will find the API I made during the "apothéose" at [O'clock](https://oclock.io/) to become a web developper.  
-I made this after 5 months of instensive learning JavaScript, and I took the "API & Data" specialization.
+I made this after 5 months of instensive learning JavaScript <img width="15px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />, and I took the "API & Data" specialization.
 
-That application run with an Express server in NodeJS.  
-The database is a PostgreSQL database.  
+That application run with an Express server in NodeJS <img width="15px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />.  
+The database is a PostgreSQL <img width="15px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" /> database.  
 I made it with `Sqitch`, that helps you to versionize your database.  
 And all the input made by user are validate by `Joi`.  
 I also made a documentation with `JSDoc Swagger` to test all the routes of the application.
@@ -45,7 +45,7 @@ That command will launch the application on [`http://localhost:3080/api`](http:/
 
 You can also see the documentation made with JSDoc Swagger on [`http://localhost:3080/api-docs`](http://localhost:3080/api-docs).  
 
-You will find a file named `test.http` to try the application, but you will need to download `REST Client` on Visual Studio Code to try the routes.
+You will find a file named `test.http` to try the application, but you will need to download `REST Client` on Visual Studio Code <img width="15px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" /> to try the routes.
 
 That API is the MVP of the Retrogamers Project.  
 It will grow as soon as possible.
