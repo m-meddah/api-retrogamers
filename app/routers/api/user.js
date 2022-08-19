@@ -22,7 +22,7 @@ router
      * @return {[User]} 200 - succes response - application/json
      * @return {ApiError} 400 - Bad request response - application/json
      */
-    .get(/*adminController.checkAdmin, */controllerHandler(controller.getAll))
+    .get(adminController.checkAdmin, controllerHandler(controller.getAll))
     /**
      * POST /api/users
      * @summary Create a new user
@@ -55,7 +55,7 @@ router
      * @return {ApiError} 400 - Bad request response - application/json
      * @return {ApiError} 404 - User not found - application/json
      */
-    .patch(/*loginController.checkLogged, */validate('body', updateSchema), controllerHandler(controller.update))
+    .patch(loginController.checkLogged, validate('body', updateSchema), controllerHandler(controller.update))
     /**
      * DELETE /api/users/{id}
      * @summary Delete one user
@@ -65,7 +65,7 @@ router
      * @return {ApiError} 400 - Bad request response - application/json
      * @return {ApiError} 404 - User not found - application/json
      */
-    .delete(/*loginController.checkLogged, */controllerHandler(controller.delete));
+    .delete(loginController.checkLogged, controllerHandler(controller.delete));
 
 router
     .route('/:id/collections')
@@ -78,7 +78,7 @@ router
      * @return {ApiError} 400 - Bad request response - application/json
      * @return {ApiError} 404 - User/collection not found- application/json
      */
-    .get(controllerHandler(collectionController.getAllByUserId))
+    .get(loginController.checkLogged, controllerHandler(collectionController.getAllByUserId))
 
 router
     .route('/:id/collections/systems')
@@ -91,7 +91,7 @@ router
      * @return {ApiError} 400 - Bad request response - application/json
      * @return {ApiError} 404 - User/collection not found- application/json
      */
-    .get(controllerHandler(collectionController.getSystemsByUser))
+    .get(loginController.checkLogged, controllerHandler(collectionController.getSystemsByUser))
 
 
 router
@@ -105,7 +105,7 @@ router
      * @return {ApiError} 400 - Bad request response - application/json
      * @return {ApiError} 404 - User/collection not found- application/json
      */
-    .get(controllerHandler(collectionController.getGamesByUser))
+    .get(loginController.checkLogged, controllerHandler(collectionController.getGamesByUser))
 
 router
     .route('/login')
@@ -127,6 +127,6 @@ router
  * @return {User} 200 - success response - application/json
  * @return {ApiError} 400 - Bad request response - application/json
  */
-router.get('/logout', /*loginController.checkLogged,*/ controllerHandler(controller.disconnect));
+router.get('/logout', loginController.checkLogged, controllerHandler(controller.disconnect));
 
 module.exports = router;

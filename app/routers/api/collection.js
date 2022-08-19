@@ -16,7 +16,7 @@ router
     * @tags Collection
     * @return {[Collection]} 200 - success response - application/json
     */
-    .get(/*adminController.checkAdmin, */controllerHandler(controller.getAll))
+    .get(adminController.checkAdmin, controllerHandler(controller.getAll))
 
 router
     .route('/:id(\\d+)')
@@ -29,7 +29,7 @@ router
      * @return {ApiError} 400 - Bad request response - application/json
      * @return {ApiError} 404 - User not found- application/json
      */
-    .get(/*loginController.checkLogged, */controllerHandler(controller.getOne))
+    .get(loginController.checkLogged, controllerHandler(controller.getOne))
     /**
      * DELETE /api/collections/{id}
      * @summary Delete one collection
@@ -39,7 +39,7 @@ router
      * @return {ApiError} 400 - Bad request response - application/json
      * @return {ApiError} 404 - Post not found - application/json
      */
-    .delete(/*loginController.checkLogged, */controllerHandler(controller.delete));
+    .delete(loginController.checkLogged, controllerHandler(controller.delete));
 
 router
     .route('/:id/details')
@@ -52,7 +52,7 @@ router
      * @return {ApiError} 400 - Bad request response - application/json
      * @return {ApiError} 404 - User not found- application/json
      */
-    .get(/*loginController.checkLogged, */controllerHandler(controller.getOneDetails));
+    .get(loginController.checkLogged, controllerHandler(controller.getOneDetails));
 
 router
     .route('/:id/systems')
@@ -65,7 +65,7 @@ router
      * @return {ApiError} 400 - Bad request response - application/json
      * @return {ApiError} 404 - System not found- application/json
      */
-    .get(/*loginController.checkLogged, */controllerHandler(controller.getAllSystems))
+    .get(loginController.checkLogged, controllerHandler(controller.getAllSystems))
     
     /**
      * POST /api/collections/{id}/systems
@@ -78,7 +78,7 @@ router
      * @return {ApiError} 400 - Bad request response - application/json
      * @return {ApiError} 404 - System not found- application/json
      */
-    .post(/*loginController.checkLogged, */controllerHandler(controller.addSystem))
+    .post(loginController.checkLogged, controllerHandler(controller.addSystem))
     /**
      * DELETE /api/collections/{id}/systems
      * @summary Remove a system into collection
@@ -88,7 +88,7 @@ router
      * @return {ApiError} 400 - Bad request response - application/json
      * @return {ApiError} 404 - System not found- application/json
      */
-    .delete(/*loginController.checkLogged, */controllerHandler(controller.removeSystem))
+    .delete(loginController.checkLogged, controllerHandler(controller.removeSystem))
 
 router
     .route('/:id/games')
@@ -101,7 +101,7 @@ router
      * @return {ApiError} 400 - Bad request response - application/json
      * @return {ApiError} 404 - User not found- application/json
      */
-    .get(/*loginController.checkLogged, */controllerHandler(controller.getAllGames))
+    .get(loginController.checkLogged, controllerHandler(controller.getAllGames))
     /**
      * POST /api/collections/{id}/games
      * @summary Add a new game into collection
@@ -111,7 +111,7 @@ router
      * @return {ApiError} 400 - Bad request response - application/json
      * @return {ApiError} 404 - System not found- application/json
      */
-    .post(/*loginController.checkLogged, */controllerHandler(controller.addGame))
+    .post(loginController.checkLogged, controllerHandler(controller.addGame))
     /**
      * DELETE /api/collections/{id}/games
      * @summary Remove a game into collection
@@ -121,6 +121,6 @@ router
      * @return {ApiError} 400 - Bad request response - application/json
      * @return {ApiError} 404 - System not found- application/json
      */
-    .delete(/*loginController.checkLogged, */controllerHandler(controller.removeGame))
+    .delete(loginController.checkLogged, controllerHandler(controller.removeGame))
 
 module.exports = router;
