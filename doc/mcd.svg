@@ -1,0 +1,163 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="406" height="592" view_box="0 0 406 592"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Fri, 05 Aug 2022 00:36:04</desc>
+
+<rect id="frame" x="0" y="0" width="406" height="592" fill="#ffffff" stroke="none" stroke-width="0"/>
+
+<!-- Association POSSEDE -->
+<line x1="335" y1="170" x2="204" y2="170" stroke="#878787" stroke-width="2"/>
+<text x="246" y="187.0" fill="#b2182b" font-family="Verdana" font-size="12">0,N</text>
+<line x1="204" y1="381" x2="204" y2="170" stroke="#878787" stroke-width="2"/>
+<text x="209.0" y="339" fill="#b2182b" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-POSSEDE">
+	<path d="M 227 145 a 14 14 90 0 1 14 14 V 170 h -74 V 159 a 14 14 90 0 1 14 -14" fill="#bababa" stroke="#bababa" stroke-width="0"/>
+	<path d="M 241 170.0 v 11 a 14 14 90 0 1 -14 14 H 181 a 14 14 90 0 1 -14 -14 V 170.0 H 74" fill="#e0e0e0" stroke="#e0e0e0" stroke-width="0"/>
+	<rect x="167" y="145" width="74" height="50" fill="none" rx="14" stroke="#878787" stroke-width="2"/>
+	<line x1="167" y1="170" x2="241" y2="170" stroke="#878787" stroke-width="1"/>
+	<text x="174" y="162.7" fill="#000000" font-family="Verdana" font-size="12">POSSEDE</text>
+</g>
+
+<!-- Association DETIENT -->
+<line x1="335" y1="507" x2="335" y2="381" stroke="#878787" stroke-width="2"/>
+<text x="340.0" y="465" fill="#b2182b" font-family="Verdana" font-size="12">0,N</text>
+<line x1="335" y1="170" x2="335" y2="381" stroke="#878787" stroke-width="2"/>
+<text x="340.0" y="297" fill="#b2182b" font-family="Verdana" font-size="12">0,N</text>
+<line x1="204" y1="381" x2="335" y2="381" stroke="#878787" stroke-width="2"/>
+<text x="242" y="398.0" fill="#b2182b" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-DETIENT">
+	<path d="M 355 356 a 14 14 90 0 1 14 14 V 381 h -68 V 370 a 14 14 90 0 1 14 -14" fill="#bababa" stroke="#bababa" stroke-width="0"/>
+	<path d="M 369 381.0 v 11 a 14 14 90 0 1 -14 14 H 315 a 14 14 90 0 1 -14 -14 V 381.0 H 68" fill="#e0e0e0" stroke="#e0e0e0" stroke-width="0"/>
+	<rect x="301" y="356" width="68" height="50" fill="none" rx="14" stroke="#878787" stroke-width="2"/>
+	<line x1="301" y1="381" x2="369" y2="381" stroke="#878787" stroke-width="1"/>
+	<text x="308" y="373.7" fill="#000000" font-family="Verdana" font-size="12">DETIENT</text>
+</g>
+
+<!-- Association CREE -->
+<line x1="72" y1="507" x2="204" y2="507" stroke="#878787" stroke-width="2"/>
+<text x="127" y="524.0" fill="#b2182b" font-family="Verdana" font-size="12">0,N</text>
+<line x1="335" y1="507" x2="204" y2="507" stroke="#878787" stroke-width="2"/>
+<text x="257" y="524.0" fill="#b2182b" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-CREE">
+	<path d="M 214 482 a 14 14 90 0 1 14 14 V 507 h -48 V 496 a 14 14 90 0 1 14 -14" fill="#bababa" stroke="#bababa" stroke-width="0"/>
+	<path d="M 228 507.0 v 11 a 14 14 90 0 1 -14 14 H 194 a 14 14 90 0 1 -14 -14 V 507.0 H 48" fill="#e0e0e0" stroke="#e0e0e0" stroke-width="0"/>
+	<rect x="180" y="482" width="48" height="50" fill="none" rx="14" stroke="#878787" stroke-width="2"/>
+	<line x1="180" y1="507" x2="228" y2="507" stroke="#878787" stroke-width="1"/>
+	<text x="187" y="499.7" fill="#000000" font-family="Verdana" font-size="12">CREE</text>
+</g>
+
+<!-- Association DECRIT -->
+<line x1="204" y1="381" x2="72" y2="381" stroke="#878787" stroke-width="2"/>
+<text x="145" y="398.0" fill="#b2182b" font-family="Verdana" font-size="12">0,1</text>
+<line x1="72" y1="170" x2="72" y2="381" stroke="#878787" stroke-width="2"/>
+<text x="77.0" y="348" fill="#b2182b" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-DECRIT">
+	<path d="M 89 356 a 14 14 90 0 1 14 14 V 381 h -62 V 370 a 14 14 90 0 1 14 -14" fill="#bababa" stroke="#bababa" stroke-width="0"/>
+	<path d="M 103 381.0 v 11 a 14 14 90 0 1 -14 14 H 55 a 14 14 90 0 1 -14 -14 V 381.0 H 62" fill="#e0e0e0" stroke="#e0e0e0" stroke-width="0"/>
+	<rect x="41" y="356" width="62" height="50" fill="none" rx="14" stroke="#878787" stroke-width="2"/>
+	<line x1="41" y1="381" x2="103" y2="381" stroke="#878787" stroke-width="1"/>
+	<text x="48" y="373.7" fill="#000000" font-family="Verdana" font-size="12">DECRIT</text>
+</g>
+
+<!-- Entity DESCRIPTIF -->
+<g id="entity-DESCRIPTIF">
+	<g id="frame-DESCRIPTIF">
+		<rect x="9" y="9" width="126" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
+		<rect x="9" y="34.0" width="126" height="297" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
+		<rect x="9" y="9" width="126" height="322" fill="none" stroke="#d6604d" stroke-width="2"/>
+		<line x1="9" y1="34" x2="135" y2="34" stroke="#d6604d" stroke-width="1"/>
+	</g>
+	<text x="35" y="26.7" fill="#000000" font-family="Verdana" font-size="12">DESCRIPTIF</text>
+	<text x="14" y="51.7" fill="#000000" font-family="Verdana" font-size="12">code_jeu</text>
+	<line x1="14" y1="54" x2="70" y2="54" stroke="#000000" stroke-width="1"/>
+	<text x="14" y="68.7" fill="#000000" font-family="Verdana" font-size="12">code_systeme</text>
+	<text x="14" y="85.7" fill="#000000" font-family="Verdana" font-size="12">titre</text>
+	<text x="14" y="102.7" fill="#000000" font-family="Verdana" font-size="12">éditeur</text>
+	<text x="14" y="119.7" fill="#000000" font-family="Verdana" font-size="12">développeur</text>
+	<text x="14" y="136.7" fill="#000000" font-family="Verdana" font-size="12">nb joueur</text>
+	<text x="14" y="153.7" fill="#000000" font-family="Verdana" font-size="12">note</text>
+	<text x="14" y="170.8" fill="#000000" font-family="Verdana" font-size="12">synopsis</text>
+	<text x="14" y="187.8" fill="#000000" font-family="Verdana" font-size="12">date de sortie</text>
+	<text x="14" y="204.8" fill="#000000" font-family="Verdana" font-size="12">genre</text>
+	<text x="14" y="221.8" fill="#000000" font-family="Verdana" font-size="12">média</text>
+	<text x="14" y="238.8" fill="#000000" font-family="Verdana" font-size="12">media_fullsize</text>
+	<text x="14" y="255.8" fill="#000000" font-family="Verdana" font-size="12">video</text>
+	<text x="14" y="272.8" fill="#000000" font-family="Verdana" font-size="12">ecran_titre</text>
+	<text x="14" y="289.8" fill="#000000" font-family="Verdana" font-size="12">ecran_titre_fullsize</text>
+	<text x="14" y="306.8" fill="#000000" font-family="Verdana" font-size="12">screenshot</text>
+	<text x="14" y="323.8" fill="#000000" font-family="Verdana" font-size="12">screenshot_fullsize</text>
+</g>
+
+<!-- Entity COLLECTION -->
+<g id="entity-COLLECTION">
+	<g id="frame-COLLECTION">
+		<rect x="283" y="473" width="104" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
+		<rect x="283" y="498.0" width="104" height="43" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
+		<rect x="283" y="473" width="104" height="68" fill="none" stroke="#d6604d" stroke-width="2"/>
+		<line x1="283" y1="498" x2="387" y2="498" stroke="#d6604d" stroke-width="1"/>
+	</g>
+	<text x="295" y="490.7" fill="#000000" font-family="Verdana" font-size="12">COLLECTION</text>
+	<text x="288" y="515.8" fill="#000000" font-family="Verdana" font-size="12">code_collection</text>
+	<line x1="288" y1="518" x2="381" y2="518" stroke="#000000" stroke-width="1"/>
+	<text x="288" y="532.8" fill="#000000" font-family="Verdana" font-size="12">label</text>
+</g>
+
+<!-- Entity USER -->
+<g id="entity-USER">
+	<g id="frame-USER">
+		<rect x="22" y="431" width="100" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
+		<rect x="22" y="456.0" width="100" height="127" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
+		<rect x="22" y="431" width="100" height="152" fill="none" stroke="#d6604d" stroke-width="2"/>
+		<line x1="22" y1="456" x2="122" y2="456" stroke="#d6604d" stroke-width="1"/>
+	</g>
+	<text x="55" y="448.7" fill="#000000" font-family="Verdana" font-size="12">USER</text>
+	<text x="27" y="473.7" fill="#000000" font-family="Verdana" font-size="12">code_user</text>
+	<line x1="27" y1="476" x2="90" y2="476" stroke="#000000" stroke-width="1"/>
+	<text x="27" y="490.7" fill="#000000" font-family="Verdana" font-size="12">email</text>
+	<text x="27" y="507.8" fill="#000000" font-family="Verdana" font-size="12">password</text>
+	<text x="27" y="524.8" fill="#000000" font-family="Verdana" font-size="12">nom</text>
+	<text x="27" y="541.8" fill="#000000" font-family="Verdana" font-size="12">prénom</text>
+	<text x="27" y="558.8" fill="#000000" font-family="Verdana" font-size="12">photo de profil</text>
+	<text x="27" y="575.8" fill="#000000" font-family="Verdana" font-size="12">role</text>
+</g>
+
+<!-- Entity SYSTEME -->
+<g id="entity-SYSTEME">
+	<g id="frame-SYSTEME">
+		<rect x="273" y="60" width="124" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
+		<rect x="273" y="85.0" width="124" height="195" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
+		<rect x="273" y="60" width="124" height="220" fill="none" stroke="#d6604d" stroke-width="2"/>
+		<line x1="273" y1="85" x2="397" y2="85" stroke="#d6604d" stroke-width="1"/>
+	</g>
+	<text x="306" y="77.7" fill="#000000" font-family="Verdana" font-size="12">SYSTEME</text>
+	<text x="278" y="102.7" fill="#000000" font-family="Verdana" font-size="12">code_systeme</text>
+	<line x1="278" y1="105" x2="365" y2="105" stroke="#000000" stroke-width="1"/>
+	<text x="278" y="119.7" fill="#000000" font-family="Verdana" font-size="12">nom</text>
+	<text x="278" y="136.7" fill="#000000" font-family="Verdana" font-size="12">compagnie</text>
+	<text x="278" y="153.7" fill="#000000" font-family="Verdana" font-size="12">type</text>
+	<text x="278" y="170.8" fill="#000000" font-family="Verdana" font-size="12">support</text>
+	<text x="278" y="187.8" fill="#000000" font-family="Verdana" font-size="12">date de lancement</text>
+	<text x="278" y="204.8" fill="#000000" font-family="Verdana" font-size="12">date d'arrêt</text>
+	<text x="278" y="221.8" fill="#000000" font-family="Verdana" font-size="12">média</text>
+	<text x="278" y="238.8" fill="#000000" font-family="Verdana" font-size="12">big_media</text>
+	<text x="278" y="255.8" fill="#000000" font-family="Verdana" font-size="12">video</text>
+	<text x="278" y="272.8" fill="#000000" font-family="Verdana" font-size="12">logo</text>
+</g>
+
+<!-- Entity JEU -->
+<g id="entity-JEU">
+	<g id="frame-JEU">
+		<rect x="171" y="347" width="66" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
+		<rect x="171" y="372.0" width="66" height="43" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
+		<rect x="171" y="347" width="66" height="68" fill="none" stroke="#d6604d" stroke-width="2"/>
+		<line x1="171" y1="372" x2="237" y2="372" stroke="#d6604d" stroke-width="1"/>
+	</g>
+	<text x="192" y="364.7" fill="#000000" font-family="Verdana" font-size="12">JEU</text>
+	<text x="176" y="389.8" fill="#000000" font-family="Verdana" font-size="12">code_jeu</text>
+	<line x1="176" y1="392" x2="232" y2="392" stroke="#000000" stroke-width="1"/>
+	<text x="176" y="406.8" fill="#000000" font-family="Verdana" font-size="12">titre</text>
+</g>
+</svg>

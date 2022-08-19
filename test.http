@@ -1,0 +1,67 @@
+@endpoint = http://localhost:{{$dotenv PORT}}/api
+
+### 404 API
+GET {{ endpoint }}/system
+
+### Homepage of the API
+GET {{ endpoint }}
+
+### API-docs
+GET {{ endpoint }}-docs
+
+### Systems list
+GET {{ endpoint }}/systems
+
+### One system
+GET {{ endpoint }}/systems/1
+
+### Games list of one system
+GET {{ endpoint }}/systems/10/games
+
+### Games list details of one system
+GET {{ endpoint }}/systems/10/details
+
+### Games details list
+GET {{ endpoint }}/games
+
+### Details of one game
+GET {{ endpoint }}/games/1
+
+### Users
+GET {{ endpoint }}/users
+
+### One user
+GET {{ endpoint }}/users/1
+
+### Delete one user
+DELETE {{ endpoint }}/users/1
+
+### One user collection
+GET {{ endpoint }}/users/1/collections
+
+### Collections list
+GET {{ endpoint }}/collections
+
+### One collection
+GET {{ endpoint }}/collections/1
+
+### One collection detail
+GET {{ endpoint }}/collections/1/details
+
+### Delete one collection
+DELETE {{ endpoint }}/collections/1
+
+### All systems in one collection
+GET {{ endpoint }}/collections/1/systems
+
+### All games in one collection
+GET {{ endpoint }}/collections/1/games
+
+### Contact messages
+GET {{ endpoint }}/contact
+
+### One contact message
+GET {{ endpoint }}/contact/1
+
+### Delete one message
+DELETE {{ endpoint }}/contact/1
