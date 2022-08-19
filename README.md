@@ -1,6 +1,6 @@
 # API RetroGamers
 
-Here you will find the API I made during the "apothéose" at O'Clock to become a web developper.  
+Here you will find the API I made during the "apothéose" at [O'clock](https://oclock.io/) to become a web developper.  
 I made this after 5 months of instensive learning JavaScript, and I took the "API & Data" specialization.
 
 That application run with an Express server in NodeJS.  
@@ -41,9 +41,9 @@ Create the database as you do usually
 npm run dev
 ```
 
-That command will launch the application on `http://localhost:3080/api`
+That command will launch the application on [`http://localhost:3080/api`](http://localhost:3080/api).
 
-You can also see the documentation made with JSDoc Swagger on `http://localhost:3080/api-docs`.  
+You can also see the documentation made with JSDoc Swagger on [`http://localhost:3080/api-docs`](http://localhost:3080/api-docs).  
 
 You will find a file named `test.http` to try the application, but you will need to download `REST Client` on Visual Studio Code to try the routes.
 
