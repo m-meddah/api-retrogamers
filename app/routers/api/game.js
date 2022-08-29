@@ -7,7 +7,7 @@ const router = express.Router();
 
 /**
  * GET /api/games
- * @summary Get all games details
+ * @summary Get all games details. Warning : the amount of data can reduce performance
  * @tags Game
  * @return {Game} 200 - success response - application/json
  * @return {ApiError} 400 - Bad request response - application/json

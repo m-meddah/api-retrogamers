@@ -127,6 +127,6 @@ router
  * @return {User} 200 - success response - application/json
  * @return {ApiError} 400 - Bad request response - application/json
  */
-router.get('/logout', loginController.checkLogged, controllerHandler(controller.disconnect));
+router.get('/logout', controllerHandler(controller.disconnect));
 
 module.exports = router;

@@ -52,5 +52,5 @@ It will grow as soon as possible.
   
 ## Thanks to Screenscraper
 
-I would like to thanks the Screenscraper team who authorized me to take some data from their database to make my project.  
+I would like to thanks the [Screenscraper](www.screenscraper.fr) team who authorized me to take datas from their database to make my project.  
 Thank you guys.
