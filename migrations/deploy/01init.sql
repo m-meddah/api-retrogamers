@@ -13,7 +13,7 @@ CREATE TABLE "user" (
     "firstname" TEXT NOT NULL,
     "lastname" TEXT NOT NULL,
     "profile_picture" TEXT,
-    "role" BOOLEAN NOT NULL DEFAULT 'user',
+    "role" TEXT NOT NULL DEFAULT 'user',
     "created_at" TIMESTAMPTZ NOT NULL DEFAULT now(),
     "updated_at" TIMESTAMPTZ
 );
@@ -45,7 +45,7 @@ CREATE TABLE "system" (
 CREATE TABLE "game" (
     "id" INT NOT NULL UNIQUE,
     "title" TEXT NOT NULL,
-    "system_id" INT NOT NULL REFERENCES "system" ("id"),
+    "system_id" INT REFERENCES "system" ("id"),
     "created_at" TIMESTAMPTZ NOT NULL DEFAULT now(),
     "updated_at" TIMESTAMPTZ
 );
