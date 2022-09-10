@@ -3,6 +3,7 @@ const express = require('express');
 const validate = require('../../validation/validator');
 const createSchema = require('../../validation/schemas/userCreateSchema');
 const updateSchema = require('../../validation/schemas/userUpdateSchema');
+const loginSchema = require('../../validation/schemas/userLoginSchema');
 
 const { userController: controller } = require('../../controllers');
 const loginController = require('../../helpers/checkLogged');
@@ -118,7 +119,7 @@ router
      * @return {ApiError} 400 - Bad request response - application/json
      * @return {ApiError} 404 - User not found - application/json
      */
-    .post(controllerHandler(controller.login))
+    .post(validate('body', loginSchema), controllerHandler(controller.login))
 
 /**
  * GET /api/users/logout

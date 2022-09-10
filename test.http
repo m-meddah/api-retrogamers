@@ -25,7 +25,7 @@ GET {{ endpoint }}/systems/10/details
 GET {{ endpoint }}/games
 
 ### Details of one game
-GET {{ endpoint }}/games/1
+GET {{ endpoint }}/games/369500
 
 ### Users
 GET {{ endpoint }}/users
