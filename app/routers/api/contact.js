@@ -2,7 +2,7 @@ const express = require('express');
 
 const validate = require('../../validation/validator');
 const createSchema = require('../../validation/schemas/contactCreateSchema');
-const adminController = require('../../helpers/checkAdmin')
+// const adminController = require('../../helpers/checkAdmin')
 const { contactController: controller } = require('../../controllers');
 const controllerHandler = require('../../helpers/controllerHandler');
 
@@ -16,7 +16,7 @@ router
     * @tags Contact
     * @return {[Contact]} 200 - success response - application/json
     */
-    .get(adminController.checkAdmin, controllerHandler(controller.getAll))
+    .get(/*adminController.checkAdmin, */controllerHandler(controller.getAll))
 
     /**
      * POST /api/contact
@@ -40,7 +40,7 @@ router
      * @return {ApiError} 400 - Bad request response - application/json
      * @return {ApiError} 404 - User not found- application/json
      */
-    .get(adminController.checkAdmin, controllerHandler(controller.getOne))
+    .get(/*adminController.checkAdmin, */controllerHandler(controller.getOne))
 
     /**
      * DELETE /api/contact/{id}
@@ -51,6 +51,6 @@ router
      * @return {ApiError} 400 - Bad request response -application/json
      * @return {ApiError} 404 - Message not found- application/json
      */
-    .delete(adminController.checkAdmin, controllerHandler(controller.delete));
+    .delete(/*adminController.checkAdmin, */controllerHandler(controller.delete));
 
 module.exports = router;

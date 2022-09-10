@@ -6,8 +6,8 @@ const updateSchema = require('../../validation/schemas/userUpdateSchema');
 const loginSchema = require('../../validation/schemas/userLoginSchema');
 
 const { userController: controller } = require('../../controllers');
-const loginController = require('../../helpers/checkLogged');
-const adminController = require('../../helpers/checkAdmin');
+// const loginController = require('../../helpers/checkLogged');
+// const adminController = require('../../helpers/checkAdmin');
 const collectionController = require('../../controllers/collection');
 const controllerHandler = require('../../helpers/controllerHandler');
 
@@ -23,7 +23,7 @@ router
      * @return {[User]} 200 - succes response - application/json
      * @return {ApiError} 400 - Bad request response - application/json
      */
-    .get(adminController.checkAdmin, controllerHandler(controller.getAll))
+    .get(/*adminController.checkAdmin, */controllerHandler(controller.getAll))
     /**
      * POST /api/users
      * @summary Create a new user
@@ -56,7 +56,7 @@ router
      * @return {ApiError} 400 - Bad request response - application/json
      * @return {ApiError} 404 - User not found - application/json
      */
-    .patch(loginController.checkLogged, validate('body', updateSchema), controllerHandler(controller.update))
+    .patch(/*loginController.checkLogged, */validate('body', updateSchema), controllerHandler(controller.update))
     /**
      * DELETE /api/users/{id}
      * @summary Delete one user
@@ -66,7 +66,7 @@ router
      * @return {ApiError} 400 - Bad request response - application/json
      * @return {ApiError} 404 - User not found - application/json
      */
-    .delete(loginController.checkLogged, controllerHandler(controller.delete));
+    .delete(/*loginController.checkLogged, */controllerHandler(controller.delete));
 
 router
     .route('/:id/collections')
@@ -79,7 +79,7 @@ router
      * @return {ApiError} 400 - Bad request response - application/json
      * @return {ApiError} 404 - User/collection not found- application/json
      */
-    .get(loginController.checkLogged, controllerHandler(collectionController.getAllByUserId))
+    .get(/*loginController.checkLogged, */controllerHandler(collectionController.getAllByUserId))
 
 router
     .route('/:id/collections/systems')
@@ -92,7 +92,7 @@ router
      * @return {ApiError} 400 - Bad request response - application/json
      * @return {ApiError} 404 - User/collection not found- application/json
      */
-    .get(loginController.checkLogged, controllerHandler(collectionController.getSystemsByUser))
+    .get(/*loginController.checkLogged, */controllerHandler(collectionController.getSystemsByUser))
 
 
 router
@@ -106,7 +106,7 @@ router
      * @return {ApiError} 400 - Bad request response - application/json
      * @return {ApiError} 404 - User/collection not found- application/json
      */
-    .get(loginController.checkLogged, controllerHandler(collectionController.getGamesByUser))
+    .get(/*loginController.checkLogged, */controllerHandler(collectionController.getGamesByUser))
 
 router
     .route('/login')
