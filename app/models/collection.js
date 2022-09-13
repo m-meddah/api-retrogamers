@@ -57,12 +57,7 @@ module.exports = {
      * @returns - The detail of the collection
      */
     async findByPkDetails(collectionId) {
-        const result = await client.query(`SELECT "collection".*, "collection_has_system_and_game".*, "system".*, "game"."system_id", "desc".* FROM "desc"
-        JOIN "game" ON "game"."id" = "desc"."id"
-        JOIN "collection_has_system_and_game" ON "game"."id" = "collection_has_system_and_game"."game_id"
-        JOIN "system" ON "game"."system_id" = "system"."id"
-        JOIN "collection" ON "collection"."id" = "collection_has_system_and_game"."collection_id"
-        WHERE "collection"."id" = ${collectionId};`);
+        const result = await client.query('SELECT "collection".*, "collection_has_system_and_game".*, "system".*, "game"."system_id", "desc".* FROM "desc" JOIN "game" ON "game"."id" = "desc"."id" JOIN "collection_has_system_and_game" ON "game"."id" = "collection_has_system_and_game"."game_id" JOIN "system" ON "game"."system_id" = "system"."id" JOIN "collection" ON "collection"."id" = "collection_has_system_and_game"."collection_id" WHERE "collection"."id" = $1;', [collectionId]);
 
         return result.rows;
     },
@@ -73,7 +68,7 @@ module.exports = {
      * @returns - The collection of the selected user
      */
     async findByUserId(userId) {
-        const result = await client.query(`SELECT * FROM "collection" WHERE "user_id" = '${userId}';`);
+        const result = await client.query('SELECT * FROM "collection" WHERE "user_id" = $1;', [userId]);
 
         if (result.rowCount === 0) {
             return null;
@@ -89,11 +84,7 @@ module.exports = {
      */
     async findSystemsByCollection(collectionId) {
         const result = await client.query(
-            `SELECT "collection".*, "system".* FROM "system"
-            JOIN "collection_has_system_and_game" ON "system"."id" = "collection_has_system_and_game"."system_id"
-            JOIN "collection" ON "collection"."id" = "collection_has_system_and_game"."collection_id"
-            WHERE "collection"."id" = ${collectionId}
-            ORDER BY "system"."name";`);
+            'SELECT "collection".*, "system".* FROM "system" JOIN "collection_has_system_and_game" ON "system"."id" = "collection_has_system_and_game"."system_id" JOIN "collection" ON "collection"."id" = "collection_has_system_and_game"."collection_id" WHERE "collection"."id" = $1 ORDER BY "system"."name";', [collectionId]);
 
         if (result.rowCount === 0) {
             return null;
@@ -109,12 +100,7 @@ module.exports = {
      */
     async findSystemsByUserId(userId) {
         const result = await client.query(
-            `SELECT "system".* FROM "system"
-            JOIN "collection_has_system_and_game" ON
-            "collection_has_system_and_game"."system_id" = "system".id
-            JOIN "collection" ON "collection"."id" = "collection_has_system_and_game"."collection_id"
-            JOIN "user" ON "user"."id" = "collection"."user_id"
-            WHERE "user"."id" = ${userId};`);
+            'SELECT "system".* FROM "system" JOIN "collection_has_system_and_game" ON "collection_has_system_and_game"."system_id" = "system".id JOIN "collection" ON "collection"."id" = "collection_has_system_and_game"."collection_id" JOIN "user" ON "user"."id" = "collection"."user_id" WHERE "user"."id" = $1;', [userId]);
 
         if (result.rowCount === 0) {
             return null;
@@ -130,13 +116,7 @@ module.exports = {
      */
     async findGamesByCollection(collectionId) {
         const result = await client.query(
-            `SELECT "collection".*, "desc".*, "system"."name" FROM "desc"
-            JOIN "game" ON "game"."id" = "desc"."id"
-            JOIN "collection_has_system_and_game" ON "game"."id" = "collection_has_system_and_game"."game_id"
-            JOIN "collection" ON "collection"."id" = "collection_has_system_and_game"."collection_id"
-            JOIN "system" ON "desc"."system_id" = "system"."id"
-            WHERE "collection"."id" = ${collectionId}
-            ORDER BY "system"."name", "desc"."title";`);
+            'SELECT "collection".*, "desc".*, "system"."name" FROM "desc" JOIN "game" ON "game"."id" = "desc"."id" JOIN "collection_has_system_and_game" ON "game"."id" = "collection_has_system_and_game"."game_id" JOIN "collection" ON "collection"."id" = "collection_has_system_and_game"."collection_id" JOIN "system" ON "desc"."system_id" = "system"."id" WHERE "collection"."id" = $1 ORDER BY "system"."name", "desc"."title";', [collectionId]);
 
         if (result.rowCount === 0) {
             return null;
@@ -153,12 +133,7 @@ module.exports = {
      */
     async findGamesByUserId(userId) {
         const result = await client.query(
-            `SELECT "user".*, "desc".* FROM "desc"
-            JOIN "game" ON "game"."id" = "desc"."id"
-            JOIN "collection_has_system_and_game" ON "game"."id" = "collection_has_system_and_game"."game_id"
-            JOIN "collection" ON "collection"."id" = "collection_has_system_and_game"."collection_id"
-            JOIN "user" ON "user"."id" = "collection"."user_id"
-            WHERE "user"."id" = ${userId};`);
+            'SELECT "user".*, "desc".* FROM "desc" JOIN "game" ON "game"."id" = "desc"."id" JOIN "collection_has_system_and_game" ON "game"."id" = "collection_has_system_and_game"."game_id" JOIN "collection" ON "collection"."id" = "collection_has_system_and_game"."collection_id" JOIN "user" ON "user"."id" = "collection"."user_id" WHERE "user"."id" = $1;', [userId]);
 
         if (result.rowCount === 0) {
             return null;
@@ -258,7 +233,7 @@ module.exports = {
     async delete(id) {
         const result = await client.query(
             `DELETE FROM "collection_has_system_and_game" WHERE "collection_id" = ${id};
-            DELETE FROM "collection" WHERE id = ${id};`);
+            DELETE FROM "collection" WHERE id = $1;`, [id]);
         return !!result.rowCount;
     },
 
